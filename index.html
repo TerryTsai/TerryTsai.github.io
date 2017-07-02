@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Terry Tsai</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat|Raleway">
@@ -39,11 +40,11 @@
 	<script>
 		function setToggle(target, toggle, cssClass) {
 			target = (typeof(target) == "string")
-						 ? document.getElementById(target)
-						 : target;
+			       ? document.getElementById(target)
+			       : target;
 			toggle = (typeof(toggle) == "string")
-						 ? document.getElementById(toggle)
-						 : toggle;
+			       ? document.getElementById(toggle)
+			       : toggle;
 			toggle.addEventListener("click", function() {
 				toggle.classList.toggle(cssClass || "active");
 				target.classList.toggle(cssClass || "active");
