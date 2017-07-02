@@ -5,6 +5,13 @@ html, body {
 
 .header {
 	line-height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: white;
+	z-index: 100;
 }
 
 .developer {
@@ -28,7 +35,7 @@ html, body {
 }
 
 .hamburger.toggled {
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 	color: #ff5252;
 	transition: transform 0.5s, color 0.5s;
 }
@@ -37,14 +44,17 @@ html, body {
 	display: block;
 	border-bottom: 1px solid black;
 	text-align: center;
-	transform: translateY(-250px);
+	transform: translate(100vw);
 	transition: transform 0.5s;
 	z-index: 0;
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background: inherit;
 }
 
 .navigation.toggled {
-	display: block;
 	transform: translateY(0);
 	transition: transform 0.5s;
 }
@@ -55,8 +65,8 @@ html, body {
 
 .navlet:hover {
 	color: #ff5252;
-	border-right: 5px solid #ff5252;
-	border-left: 5px solid #ffffff;
+	border-left: 5px solid #ff5252;
+	border-right: 5px solid #ffffff;
 }
 
 .navlet > a {
@@ -69,8 +79,13 @@ html, body {
 }
 
 .footer {
-	line-height: 30px;
-	text-align: right;
-	border-top: 1px solid black;
-	padding: 0 10px;
+	color: #777;
+	font-size: 0.8em;
+	line-height: 50px;
+	padding: 0 30px;
+}
+
+.fuel {
+	float: right;
+	line-height: inherit;
 }

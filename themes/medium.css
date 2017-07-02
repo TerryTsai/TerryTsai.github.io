@@ -1,13 +1,11 @@
 @media only screen and (min-width : 400px) {
 
-	.hamburger {
-		display: none;
+	.header {
+		line-height: 50px;
 	}
 
-	.navigation, .navigation.toggled {
-		display: block;
-		transform: translateY(0);
-		transition: transform 0s;
+	.navigation {
+		height: auto;
 	}
 
 	.navigation > ul {
@@ -20,13 +18,12 @@
 
 	.navlet:hover {
 		color: #ff5252;
-		border-left-width: 0;
 		border-right-width: 0;
 	}
 
-	.navlet:not(:last-child),
-	.navlet:not(:last-child):hover {
-		border-right: 1px solid black;
+	.navlet, .navlet:hover {
+		border-left: 1px solid black;
+		border-right: none;
 	}
 
 }

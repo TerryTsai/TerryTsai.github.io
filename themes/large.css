@@ -1,40 +1,40 @@
 @media only screen and (min-width : 800px) {
 
 	.header {
+		border-bottom: 1px solid black;
 		display: flex;
 		line-height: 50px;
 		padding: 0 30px;
-		border-bottom: 1px solid black;
 	}
 
-	.developer {
-		border-bottom: 0px solid black;
-	}
-
-	.navigation {
+	.developer,
+	.navigation,
+	.navigation.toggled,
+	.navigation > ul,
+	.navlet,
+	.navlet:hover,
+	.navlet > a {
+		border: none;
 		display: inline-block;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.navigation,
+	.navigation.toggled {
 		flex: 1;
+		position: unset;
 		text-align: right;
-		border-bottom: 0px solid black;
+		transform: translateY(0);
+		transition: transform 0s;
 	}
 
-	.navigation > ul {
-		display: inline-block;
-	}
-
-	.navlet {
-		display: inline-block;
-	}
-
-	.navlet:not(:last-child),
-	.navlet:not(:last-child):hover {
-		border-right: 0px solid black;
-	}
 
 	.navlet > a {
-		display: inline-block;
+		box-sizing: border-box;
 		padding: 0 10px;
-		width: auto;
 	}
 
 }

@@ -13,45 +13,55 @@
 <body>
 	<!-- HEADER -->
 	<header class="header">
-		<div class="developer">
+		<h1 class="developer">
 			<span>Terry Tsai<span>
 			<a class="hamburger" id="hamburger"><i class="fa fa-bars"></i></a>
-		</div>
+		</h1>
 		<nav class="navigation" id="navigation">
-			<ul>
-				<li class="navlet"><a href="#"><i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>Resume</a></li>
-				<li class="navlet"><a href="https://github.com/TerryTsai/"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
-				<li class="navlet"><a href="mailto:ttsai0509@gmail.com?Subject=Psst..."><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>Contact</a></li>
+			<ul
+				><li class="navlet"><a href="#"><i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>Resume</a></li
+				><li class="navlet"><a href="https://github.com/TerryTsai/"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li
+				><li class="navlet"><a href="mailto:ttsai0509@gmail.com?Subject=Psst..."><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>Contact</a></li
+				><li class="navlet"><a href="#projects"><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>Projects</a></li>
+				<!-- Odd syntax above removes those pesky whitespace only text nodes between li nodes -->
+				<!-- https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM -->
 			</ul>
 		</nav>
 	</header>
 
 	<section style="text-align: center; height: 100%; padding-top: 150px;">
+		<h2>About Me</h2>
 		<article>
-			<h1>Under Construction</h1>
+		</article>
+	</section>
+
+	<section id="projects" style="background: rgba(0,0,0,0.01); text-align: center; height: 100%; padding-top: 150px;">
+		<h2>Projects</h2>
+		<article>
 		</article>
 	</section>
 
 	<!-- FOOTER -->
 	<footer class="footer">
-		<i class="fa fa-heart"></i>
+		<i class="fa fa-copyright"></i><span>Terry Tsai 2017</span>
+		<i class="fa fa-coffee fuel" title="Let's do this!"></i>
 	</footer>
 
 	<script>
-		function setToggle(target, toggle, cssClass) {
-			target = (typeof(target) == "string")
-			       ? document.getElementById(target)
-			       : target;
-			toggle = (typeof(toggle) == "string")
-			       ? document.getElementById(toggle)
-			       : toggle;
-			toggle.addEventListener("click", function() {
-				toggle.classList.toggle(cssClass || "active");
-				target.classList.toggle(cssClass || "active");
-			});
+
+		function toggleNav() {
+			hamburger.classList.toggle("toggled");
+			navigation.classList.toggle("toggled");
 		}
 
-		setToggle("navigation", "hamburger", "toggled");
+		var navigation = document.getElementById("navigation");
+		var hamburger = document.getElementById("hamburger");
+		var navlets = document.getElementsByClassName("navlet");
+
+		hamburger.addEventListener("click", toggleNav);
+		for (var i = 0; i < navlets.length; i++)
+			navlets[i].addEventListener("click", toggleNav);
+
 	</script>
 </body>
 </html>
