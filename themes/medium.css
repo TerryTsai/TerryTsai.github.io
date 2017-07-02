@@ -1,0 +1,30 @@
+@media only screen and (min-width : 400px) {
+
+	.hamburger {
+		display: none;
+	}
+
+	.navigation {
+		display: block;
+	}
+
+	.navigation > ul {
+		display: flex;
+	}
+
+	.navlet {
+		flex: 1;
+	}
+
+	.navlet:hover {
+		color: #ff5252;
+		border-left-width: 0;
+		border-right-width: 0;
+	}
+
+	.navlet:not(:last-child),
+	.navlet:not(:last-child):hover {
+		border-right: 1px solid black;
+	}
+
+}

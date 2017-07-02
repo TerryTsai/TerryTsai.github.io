@@ -2,8 +2,55 @@
 <html>
 <head>
 	<title>Terry Tsai</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat|Raleway">
+	<link rel="stylesheet" type="text/css" href="./themes/small.css">
+	<link rel="stylesheet" type="text/css" href="./themes/medium.css">
+	<link rel="stylesheet" type="text/css" href="./themes/large.css">
 </head>
 <body>
-	<h1>Under Construction</h1>
+	<!-- HEADER -->
+	<header class="header">
+		<div class="developer">
+			<span>Terry Tsai<span>
+			<a class="hamburger" id="hamburger"><i class="fa fa-bars"></i></a>
+		</div>
+		<nav class="navigation" id="navigation">
+			<ul>
+				<li class="navlet"><a href="#"><i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i>Resume</a></li>
+				<li class="navlet"><a href="https://github.com/TerryTsai/"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
+				<li class="navlet"><a href="mailto:ttsai0509@gmail.com?Subject=Psst..."><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i>Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section style="text-align: center; height: 100%; padding-top: 150px;">
+		<article>
+			<h1>Under Construction</h1>
+		</article>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<i class="fa fa-heart"></i>
+	</footer>
+
+	<script>
+		function setToggle(target, toggle, cssClass) {
+			target = (typeof(target) == "string")
+						 ? document.getElementById(target)
+						 : target;
+			toggle = (typeof(toggle) == "string")
+						 ? document.getElementById(toggle)
+						 : toggle;
+			toggle.addEventListener("click", function() {
+				toggle.classList.toggle(cssClass || "active");
+				target.classList.toggle(cssClass || "active");
+			});
+		}
+
+		setToggle("navigation", "hamburger");
+	</script>
 </body>
 </html>
