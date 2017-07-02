@@ -4,37 +4,53 @@ html, body {
 }
 
 .header {
-	line-height: 40px;
+	line-height: 80px;
 }
 
 .developer {
+	background: white;
 	border-bottom: 1px solid black;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
 	letter-spacing: 4px;
 	line-height: inherit;
 	text-align: center;
 	text-transform: uppercase;
+	z-index: 100;
+	position: relative;
 }
 
 .hamburger {
 	position: absolute;
 	right: 10px;
+	transition: transform 0.5s, color 0.5s;
 }
 
-.hamburger:hover, .hamburger.active {
+.hamburger.toggled {
+	transform: rotate(90deg);
 	color: #ff5252;
+	transition: transform 0.5s, color 0.5s;
 }
 
 .navigation {
-	display: none;
+	display: block;
 	border-bottom: 1px solid black;
 	text-align: center;
+	transform: translateY(-250px);
+	transition: transform 0.5s;
+	z-index: 0;
+	position: relative;
 }
 
-.navigation.active {
+.navigation.toggled {
 	display: block;
+	transform: translateY(0);
+	transition: transform 0.5s;
+}
+
+.navlet {
+	z-index: inherit;
 }
 
 .navlet:hover {

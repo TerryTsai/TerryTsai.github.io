@@ -4,8 +4,10 @@
 		display: none;
 	}
 
-	.navigation {
+	.navigation, .navigation.toggled {
 		display: block;
+		transform: translateY(0);
+		transition: transform 0s;
 	}
 
 	.navigation > ul {
