@@ -5,6 +5,8 @@
 	}
 
 	.navigation {
+		border-left: none;
+		border-right: none;
 		height: auto;
 	}
 
