@@ -1,9 +1,7 @@
 @media only screen and (min-width : 800px) {
 
 	.header {
-		border-bottom: 1px solid black;
 		display: flex;
-		line-height: 50px;
 		padding: 0 30px;
 	}
 
@@ -14,8 +12,12 @@
 	.navlet,
 	.navlet:hover,
 	.navlet > a {
-		border: none;
+		background: transparent;
 		display: inline-block;
+	}
+
+	.developer {
+		border: none;
 	}
 
 	.hamburger {
@@ -24,6 +26,7 @@
 
 	.navigation,
 	.navigation.toggled {
+		margin-top: 0px;
 		flex: 1;
 		position: unset;
 		text-align: right;
@@ -31,6 +34,11 @@
 		transition: transform 0s;
 	}
 
+	.navlet:hover {
+		border-bottom-color: #ff5252;
+		border-left-color: transparent;
+		border-top-color: transparent;
+	}
 
 	.navlet > a {
 		box-sizing: border-box;

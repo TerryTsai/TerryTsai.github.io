@@ -5,8 +5,6 @@
 	}
 
 	.navigation {
-		border-left: none;
-		border-right: none;
 		height: auto;
 	}
 
@@ -19,13 +17,9 @@
 	}
 
 	.navlet:hover {
-		color: #ff5252;
-		border-right-width: 0;
-	}
-
-	.navlet, .navlet:hover {
-		border-left: 1px solid black;
-		border-right: none;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-top-color: #ff5252;
 	}
 
 }

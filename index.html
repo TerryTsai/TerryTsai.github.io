@@ -29,7 +29,7 @@
 		</nav>
 	</header>
 
-	<section style="text-align: center; height: 100%; padding-top: 150px;">
+	<section style="margin-top: 100px; text-align: center; height: 100%; padding-top: 150px;">
 		<h2>About Me</h2>
 		<article>
 		</article>
@@ -45,19 +45,18 @@
 	<footer class="footer">
 		<i class="fa fa-copyright"></i>
 		<span>Terry Tsai 2017</span>
-		<i class="fa fa-coffee fuel" title="Let's do this!"></i>
+		<i class="fa fa-coffee fuel"></i>
 	</footer>
 
 	<script>
+		var navigation = document.getElementById("navigation");
+		var hamburger = document.getElementById("hamburger");
+		var navlets = document.getElementsByClassName("navlet");
 
 		function toggleNav() {
 			hamburger.classList.toggle("toggled");
 			navigation.classList.toggle("toggled");
 		}
-
-		var navigation = document.getElementById("navigation");
-		var hamburger = document.getElementById("hamburger");
-		var navlets = document.getElementsByClassName("navlet");
 
 		hamburger.addEventListener("click", toggleNav);
 		for (var i = 0; i < navlets.length; i++)
